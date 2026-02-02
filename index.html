@@ -2,164 +2,296 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Importancia de la Vacunación</title>
+<title>La Importancia de la Vacunación</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#f2f2f2;
-    color:#333;
+
+/* =========== TIPOGRAFÍA =========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --color-bg: #f8f9fa;
+  --color-primary: #2a9df4;
+  --color-secondary: #034f84;
+  --color-accent: #00c6ff;
+  --color-text: #222;
+  --color-light: #ffffff;
+  --color-soft: #e4e4e4;
 }
-header{
-    background:#2e2e2e;
-    color:white;
-    padding:45px;
-    text-align:center;
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
-section{
-    background:white;
-    max-width:1000px;
-    margin:30px auto;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
-h2{
-    color:#444;
-    border-bottom:2px solid #ccc;
-    padding-bottom:5px;
+
+/* =========== NAV =========== */
+nav {
+  position: fixed;
+  width: 100%;
+  background: var(--color-secondary);
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
 }
-img{
-    width:100%;
-    max-height:420px;
-    object-fit:contain;
-    margin:20px 0;
+nav a {
+  color: var(--color-light);
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
 }
-button{
-    background:#555;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:5px;
-    cursor:pointer;
+nav a:hover {
+  color: var(--color-accent);
 }
-button:hover{
-    background:#333;
+
+/* =========== HEADER =========== */
+header {
+  height: 100vh;
+  background: linear-gradient(135deg, #2a9df4, #00c6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-light);
+  padding: 30px;
 }
-.oculto{
-    display:none;
+header h1 {
+  font-size: 3.4rem;
+  margin: 0;
 }
-iframe{
-    width:100%;
-    height:400px;
-    border-radius:10px;
+header p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  max-width: 800px;
 }
+
+/* =========== SECTION =========== */
+section {
+  max-width: 1200px;
+  margin: 130px auto;
+  background: var(--color-light);
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+h2 {
+  font-size: 2.4rem;
+  color: var(--color-secondary);
+  margin-bottom: 15px;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* =========== GRID =========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* =========== CARDS =========== */
+.card {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.08);
+  transition: .3s;
+}
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+/* =========== BOTONES =========== */
+button {
+  background: var(--color-primary);
+  color: var(--color-light);
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: .3s;
+}
+button:hover {
+  background: var(--color-accent);
+}
+
+/* =========== VIDEO =========== */
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =========== FOOTER =========== */
 footer{
-    background:#2e2e2e;
-    color:white;
-    text-align:center;
-    padding:15px;
+  background: var(--color-secondary);
+  color: var(--color-light);
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
 }
+
 </style>
 
 <script>
-function toggle(id){
-    let e=document.getElementById(id);
-    e.style.display = e.style.display==="none" ? "block" : "none";
+function toggleInfo(id) {
+  let e = document.getElementById(id);
+  e.style.display = e.style.display === "block" ? "none" : "block";
 }
 </script>
 </head>
 
 <body>
 
-<header>
-<h1>La Importancia de la Vacunación</h1>
-<p>Proyecto de Tecnología – Secundaria 10</p>
+<nav>
+  <div><strong>Vacunación</strong></div>
+  <div>
+    <a href="#inicio">Inicio</a>
+    <a href="#info">¿Qué son?</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#mitos">Mitos</a>
+    <a href="#enfermedades">Enfermedades</a>
+    <a href="#entrevista">Entrevista</a>
+    <a href="#consultas">Consultas</a>
+  </div>
+</nav>
+
+<header id="inicio">
+  <div>
+    <h1>La Importancia de la Vacunación</h1>
+    <p>
+      Proyecto avanzado de Tecnología  
+      <br>Secundaria 10 – Grupo 19  
+      <br>Christian de Jesús Cruz Gómez –  
+      Mariana López Negrete – Yamileth García
+    </p>
+  </div>
 </header>
 
-<section>
-<h2>Portada</h2>
-<img src="img1.png" alt="Vacuna combatiendo virus">
-
-<p><strong>Integrantes:</strong></p>
-<ul>
-<li>Christian de Jesús Cruz Gómez</li>
-<li>Mariana López Negrete</li>
-<li>Yamileth García</li>
-</ul>
-
-<p><strong>Grupo:</strong> 19</p>
-<p><strong>Materia:</strong> Tecnología</p>
-</section>
-
-<section>
+<section id="info">
 <h2>¿Qué son las vacunas?</h2>
-<img src="img2.png" alt="Doctor explicando vacunación">
 
 <p>
-Las vacunas son sustancias que ayudan al sistema inmunológico a reconocer
-y combatir virus y bacterias sin causar la enfermedad.
+Las vacunas son sustancias que enseñan al sistema inmunológico cómo defenderse contra enfermedades peligrosas, sin que tengas que enfermarte de verdad. Funcionan como una “memoria” para que tu cuerpo reconozca y combata virus o bacterias cuando realmente aparezcan.
+</p>
+
+<p>
+Son seguras, estudiadas por científicos y han sido fundamentales para salvar millones de vidas desde el siglo XX.
 </p>
 </section>
 
-<section>
+<section id="beneficios">
 <h2>Beneficios de la Vacunación</h2>
-<img src="img3.png" alt="Protección con vacunas">
+
+<div class="grid">
+  <div class="card">
+    <h3>Protección individual</h3>
+    Ayuda a que tu cuerpo esté preparado para defenderse de enfermedades antes de que te afecten.
+  </div>
+
+  <div class="card">
+    <h3>Protección comunitaria</h3>
+    Cuando la mayoría está vacunada, se reduce la circulación de enfermedades —esto se llama *inmunidad de grupo*.
+  </div>
+
+  <div class="card">
+    <h3>Reducción de brotes</h3>
+    Enfermedades como el sarampión y la poliomielitis han disminuido muchísimo gracias a las vacunas.
+  </div>
+
+  <div class="card">
+    <h3>Menos muertes</h3>
+    La vacunación ha salvado millones de vidas en todo el mundo cada año.
+  </div>
+</div>
+</section>
+
+<section id="mitos">
+<h2>Mitos y realidad</h2>
+
+<button onclick="toggleInfo('a1')">¿Las vacunas causan autismo?</button>
+<p id="a1" style="display:none;">
+No. No existe evidencia científica que relacione vacunas con autismo. Ese mito fue desacreditado por estudios confiables.
+</p>
+
+<button onclick="toggleInfo('a2')">¿Las vacunas contienen cosas peligrosas?</button>
+<p id="a2" style="display:none;">
+Las vacunas contienen componentes seguros y en cantidades controladas. Antes de usarse pasan por pruebas estrictas.
+</p>
+
+<button onclick="toggleInfo('a3')">¿Vacunarse es peor que enfermarse?</button>
+<p id="a3" style="display:none;">
+Enfermarse puede causar complicaciones graves. Vacunarse es mucho más seguro y controlado.
+</p>
+</section>
+
+<section id="enfermedades">
+<h2>Enfermedades que previenen</h2>
 
 <ul>
-<li>Previenen enfermedades graves</li>
-<li>Protegen a la comunidad</li>
-<li>Reducen la mortalidad</li>
-<li>Evitan epidemias</li>
-<li>Fortalecen defensas</li>
-<li>Protegen a niños y adultos</li>
-<li>Mejoran la salud pública</li>
+  <li>🟢 Sarampión</li>
+  <li>🟢 Poliomielitis</li>
+  <li>🟢 Difteria</li>
+  <li>🟢 Tétanos</li>
+  <li>🟢 Influenza</li>
+  <li>🟢 Hepatitis B</li>
+  <li>🟢 COVID-19</li>
 </ul>
 </section>
 
-<section>
-<h2>Mitos y aclaraciones</h2>
-<img src="img4.png" alt="Vacuna y protección">
+<section id="entrevista">
+<h2>Entrevista sobre vacunación</h2>
 
-<button onclick="toggle('m1')">¿Las vacunas causan enfermedades?</button>
-<p id="m1" class="oculto">No. Solo entrenan al sistema inmunológico.</p>
+<p>
+A continuación un video con expertos explicando la importancia real de las vacunas:
+</p>
 
-<br><br>
-
-<button onclick="toggle('m2')">¿Las vacunas no funcionan?</button>
-<p id="m2" class="oculto">Sí funcionan y han eliminado muchas enfermedades.</p>
-
-<br><br>
-
-<button onclick="toggle('m3')">¿Son peligrosas?</button>
-<p id="m3" class="oculto">Son seguras y están científicamente comprobadas.</p>
-</section>
-
-<section>
-<h2>Entrevista sobre la vacunación</h2>
-<img src="img5.png" alt="Vacuna en mano">
-
+<div class="video">
 <iframe src="https://www.youtube.com/embed/9Yy0n8yZ5ZQ" allowfullscreen></iframe>
+</div>
 </section>
 
-<section>
-<h2>Enfermedades que previene</h2>
-<img src="img6.png" alt="Vacunación infantil">
+<section id="consultas">
+<h2>Fuentes confiables para consultar</h2>
 
 <ul>
-<li>Sarampión</li>
-<li>Poliomielitis</li>
-<li>Influenza</li>
-<li>Hepatitis B</li>
-<li>Tétanos</li>
-<li>Rubéola</li>
-<li>COVID-19</li>
+  <li><a href="https://www.who.int" target="_blank">Organización Mundial de la Salud (OMS)</a></li>
+  <li><a href="https://www.cdc.gov" target="_blank">CDC – Centers for Disease Control</a></li>
+  <li><a href="https://www.unicef.org" target="_blank">UNICEF</a></li>
+  <li><a href="https://www.nih.gov" target="_blank">NIH – National Institutes of Health</a></li>
 </ul>
 </section>
 
 <footer>
-<p>© 2026 | Proyecto de Tecnología – Secundaria 10</p>
+<p>Proyecto de Tecnología &middot; Importancia de la Vacunación &middot; 2026</p>
 </footer>
 
 </body>
