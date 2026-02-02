@@ -2,124 +2,121 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Importancia de la Vacunación</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>La Importancia de la Vacunación</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-:root{
-  --azul:#1e88e5;
-  --azul-oscuro:#0d47a1;
-  --gris:#f2f2f2;
-  --texto:#222;
-}
-
-*{box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
 body{
   margin:0;
-  background:var(--gris);
-  color:var(--texto);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:#f3f4f6;
+  color:#1f2937;
+  line-height:1.8;
+}
+
+:root{
+  --azul:#2563eb;
+  --azul-oscuro:#1e3a8a;
+  --verde:#16a34a;
 }
 
 nav{
   position:fixed;
   top:0;
   width:100%;
-  background:var(--azul-oscuro);
-  padding:12px 30px;
+  background:linear-gradient(90deg,var(--azul-oscuro),var(--azul));
+  padding:14px 30px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   z-index:1000;
 }
 
-nav h1{
-  color:white;
-  font-size:1.2rem;
-}
-
+nav strong{color:white;font-size:1.1rem;}
 nav a{
   color:white;
-  margin:0 10px;
+  margin-left:14px;
   text-decoration:none;
   font-weight:500;
 }
-
-nav a:hover{color:#90caf9;}
+nav a:hover{opacity:.8;}
 
 header{
   margin-top:70px;
-  height:90vh;
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-  url("https://images.unsplash.com/photo-1584036561566-baf8f5f1b144");
+  height:95vh;
+  background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1584036561566-baf8f5f1b144");
   background-size:cover;
   background-position:center;
   color:white;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   text-align:center;
   padding:40px;
 }
 
-header h2{font-size:3rem;}
-header p{font-size:1.2rem;max-width:800px;}
+header h1{font-size:3rem;}
+header p{max-width:900px;font-size:1.2rem;}
 
 section{
   max-width:1200px;
-  margin:80px auto;
+  margin:90px auto;
   background:white;
-  padding:50px;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  padding:60px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
 }
 
-section h2{
+h2{
   color:var(--azul-oscuro);
-  font-size:2.2rem;
+  font-size:2.3rem;
+  margin-bottom:20px;
 }
 
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
+  gap:30px;
 }
 
 .card{
-  background:#fafafa;
+  background:#f9fafb;
   padding:25px;
-  border-radius:12px;
-  box-shadow:0 6px 15px rgba(0,0,0,.08);
+  border-radius:15px;
+  box-shadow:0 10px 20px rgba(0,0,0,.1);
 }
 
 .card img{
   width:100%;
-  border-radius:10px;
+  border-radius:12px;
   margin-bottom:15px;
 }
 
 .video{
   position:relative;
+  width:100%;
   padding-bottom:56.25%;
   height:0;
   overflow:hidden;
-  border-radius:12px;
+  border-radius:16px;
+  box-shadow:0 15px 30px rgba(0,0,0,.25);
 }
 
 .video iframe{
   position:absolute;
+  inset:0;
   width:100%;
   height:100%;
-  border:none;
+  border:0;
 }
 
 footer{
   background:var(--azul-oscuro);
   color:white;
   text-align:center;
-  padding:30px;
+  padding:35px;
 }
 </style>
 </head>
@@ -127,101 +124,137 @@ footer{
 <body>
 
 <nav>
-  <h1>Vacunación</h1>
-  <div>
-    <a href="#inicio">Inicio</a>
-    <a href="#quees">¿Qué son?</a>
-    <a href="#beneficios">Beneficios</a>
-    <a href="#mitos">Mitos</a>
-    <a href="#enfermedades">Enfermedades</a>
-    <a href="#video">Video</a>
-    <a href="#fuentes">Fuentes</a>
-  </div>
+<strong>Vacunación</strong>
+<div>
+<a href="#inicio">Inicio</a>
+<a href="#que">¿Qué son?</a>
+<a href="#historia">Historia</a>
+<a href="#beneficios">Beneficios</a>
+<a href="#riesgos">Riesgos</a>
+<a href="#mitos">Mitos</a>
+<a href="#enfermedades">Enfermedades</a>
+<a href="#entrevista">Entrevista</a>
+<a href="#fuentes">Fuentes</a>
+</div>
 </nav>
 
 <header id="inicio">
-  <div>
-    <h2>La Importancia de la Vacunación</h2>
-    <p>
-      Proyecto de Tecnología – Secundaria 10 – Grupo 19  
-      <br>Christian de Jesús Cruz Gómez  
-      <br>Mariana López Negrete  
-      <br>Yamileth García
-    </p>
-  </div>
+<div>
+<h1>La Importancia de la Vacunación</h1>
+<p>
+Proyecto de Tecnología – Secundaria 10 – Grupo 19<br><br>
+Christian de Jesús Cruz Gómez · Mariana López Negrete · Yamileth García
+</p>
+</div>
 </header>
 
-<section id="quees">
+<section id="que">
 <h2>¿Qué son las vacunas?</h2>
 <p>
-Las vacunas son uno de los mayores avances de la medicina moderna. Preparan al sistema inmunológico para reconocer y combatir virus y bacterias antes de que causen enfermedades graves.
+Las vacunas son preparaciones biológicas diseñadas para estimular el sistema
+inmunológico y generar defensas contra enfermedades infecciosas. Funcionan
+imitando la presencia de un patógeno sin causar la enfermedad.
 </p>
-<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" width="100%" style="border-radius:12px;">
+<p>
+Gracias a la vacunación, el cuerpo aprende a reconocer virus y bacterias,
+permitiendo una respuesta rápida y eficaz en futuras exposiciones.
+</p>
+</section>
+
+<section id="historia">
+<h2>Breve historia de la vacunación</h2>
+<p>
+La vacunación comenzó en el siglo XVIII con Edward Jenner y la vacuna contra
+la viruela. Desde entonces, se han desarrollado vacunas que han logrado
+erradicar o controlar enfermedades mortales en todo el mundo.
+</p>
+<p>
+La viruela fue oficialmente erradicada en 1980, convirtiéndose en uno de los
+mayores logros de la salud pública global.
+</p>
 </section>
 
 <section id="beneficios">
 <h2>Beneficios de la vacunación</h2>
 <div class="grid">
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
-    <h3>Protección personal</h3>
-    <p>Reduce el riesgo de enfermar gravemente.</p>
-  </div>
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde">
-    <h3>Inmunidad colectiva</h3>
-    <p>Protege a quienes no pueden vacunarse.</p>
-  </div>
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144">
-    <h3>Prevención de epidemias</h3>
-    <p>Evita brotes y pandemias.</p>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+<p>Protección individual contra enfermedades graves.</p>
 </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde">
+<p>Inmunidad colectiva que protege a toda la comunidad.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144">
+<p>Reducción de epidemias y pandemias.</p>
+</div>
+</div>
+</section>
+
+<section id="riesgos">
+<h2>¿Qué pasa si no nos vacunamos?</h2>
+<p>
+La falta de vacunación puede provocar el regreso de enfermedades que ya estaban
+controladas, aumentando hospitalizaciones, muertes y costos para los sistemas
+de salud.
+</p>
+<p>
+Además, pone en riesgo a personas vulnerables como bebés, adultos mayores
+y personas con enfermedades crónicas.
+</p>
 </section>
 
 <section id="mitos">
 <h2>Mitos y realidades</h2>
-<p><strong>Mito:</strong> Las vacunas son peligrosas.</p>
-<p><strong>Realidad:</strong> Son seguras y pasan pruebas científicas estrictas.</p>
+<p><strong>Mito:</strong> Las vacunas causan enfermedades.</p>
+<p><strong>Realidad:</strong> Las vacunas no causan la enfermedad, solo entrenan al sistema inmunológico.</p>
 
-<p><strong>Mito:</strong> No son necesarias.</p>
-<p><strong>Realidad:</strong> Han salvado millones de vidas.</p>
+<p><strong>Mito:</strong> No son necesarias hoy en día.</p>
+<p><strong>Realidad:</strong> Siguen siendo esenciales para evitar brotes.</p>
 </section>
 
 <section id="enfermedades">
 <h2>Enfermedades que previenen</h2>
 <ul>
-  <li>Sarampión</li>
-  <li>Poliomielitis</li>
-  <li>Tétanos</li>
-  <li>Influenza</li>
-  <li>Hepatitis B</li>
-  <li>COVID-19</li>
+<li>Sarampión</li>
+<li>Poliomielitis</li>
+<li>Tétanos</li>
+<li>Influenza</li>
+<li>Hepatitis B</li>
+<li>Rubéola</li>
+<li>COVID-19</li>
 </ul>
 </section>
 
-<section id="video">
-<h2>Entrevista y explicación</h2>
+<section id="entrevista">
+<h2>Entrevista con especialistas</h2>
+<p>
+En el siguiente video, expertos en salud explican la importancia de la vacunación
+y su impacto en la sociedad.
+</p>
+
 <div class="video">
-<iframe src="https://www.youtube.com/embed/9Yy0n8yZ5ZQ"
+<iframe
+src="https://www.youtube-nocookie.com/embed/9Yy0n8yZ5ZQ"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>
+allowfullscreen>
+</iframe>
 </div>
 </section>
 
 <section id="fuentes">
-<h2>Fuentes confiables</h2>
+<h2>Fuentes confiables para consultar</h2>
 <ul>
-<li>https://www.who.int</li>
-<li>https://www.cdc.gov</li>
-<li>https://www.unicef.org</li>
-<li>https://www.nih.gov</li>
+<li>Organización Mundial de la Salud (OMS) – https://www.who.int</li>
+<li>Centros para el Control y Prevención de Enfermedades (CDC) – https://www.cdc.gov</li>
+<li>UNICEF – https://www.unicef.org</li>
+<li>Institutos Nacionales de Salud (NIH) – https://www.nih.gov</li>
 </ul>
 </section>
 
 <footer>
-<p>Proyecto de Tecnología · Vacunación · 2026</p>
+<p>Proyecto de Tecnología · Importancia de la Vacunación · 2026</p>
 </footer>
 
 </body>
