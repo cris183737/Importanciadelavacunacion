@@ -43,7 +43,7 @@ nav a:hover{opacity:.8;}
 
 header{
   margin-top:70px;
-  height:95vh;
+  min-height:95vh;
   background:
     linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
     url("https://images.unsplash.com/photo-1584036561566-baf8f5f1b144");
@@ -94,6 +94,12 @@ h2{
   margin-bottom:15px;
 }
 
+img.full{
+  width:100%;
+  border-radius:15px;
+  margin:25px 0;
+}
+
 .video{
   position:relative;
   width:100%;
@@ -130,11 +136,11 @@ footer{
 <a href="#que">¿Qué son?</a>
 <a href="#historia">Historia</a>
 <a href="#beneficios">Beneficios</a>
+<a href="#impacto">Impacto social</a>
 <a href="#riesgos">Riesgos</a>
 <a href="#mitos">Mitos</a>
 <a href="#enfermedades">Enfermedades</a>
-<a href="#entrevista">Entrevista</a>
-<a href="#fuentes">Fuentes</a>
+<a href="#entrevista">Video</a>
 </div>
 </nav>
 
@@ -151,66 +157,76 @@ Christian de Jesús Cruz Gómez · Mariana López Negrete · Yamileth García
 <section id="que">
 <h2>¿Qué son las vacunas?</h2>
 <p>
-Las vacunas son preparaciones biológicas diseñadas para estimular el sistema
-inmunológico y generar defensas contra enfermedades infecciosas. Funcionan
-imitando la presencia de un patógeno sin causar la enfermedad.
+Las vacunas son sustancias biológicas diseñadas para preparar al sistema
+inmunológico frente a virus y bacterias. Actúan estimulando las defensas
+naturales del cuerpo sin causar la enfermedad.
 </p>
+<img class="full" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
 <p>
-Gracias a la vacunación, el cuerpo aprende a reconocer virus y bacterias,
-permitiendo una respuesta rápida y eficaz en futuras exposiciones.
+Su uso ha permitido reducir drásticamente la mortalidad infantil y mejorar
+la esperanza de vida a nivel mundial.
 </p>
 </section>
 
 <section id="historia">
-<h2>Breve historia de la vacunación</h2>
+<h2>Historia de la vacunación</h2>
 <p>
-La vacunación comenzó en el siglo XVIII con Edward Jenner y la vacuna contra
-la viruela. Desde entonces, se han desarrollado vacunas que han logrado
-erradicar o controlar enfermedades mortales en todo el mundo.
+La historia de la vacunación comienza en 1796 con Edward Jenner y la vacuna
+contra la viruela. A partir de ese momento, la ciencia médica desarrolló
+vacunas contra enfermedades que antes eran mortales.
 </p>
+<img class="full" src="https://images.unsplash.com/photo-1603398938378-e54eab446dde">
 <p>
-La viruela fue oficialmente erradicada en 1980, convirtiéndose en uno de los
-mayores logros de la salud pública global.
+En 1980, la Organización Mundial de la Salud declaró erradicada la viruela,
+marcando un hito histórico en la medicina.
 </p>
 </section>
 
 <section id="beneficios">
-<h2>Beneficios de la vacunación</h2>
+<h2>Beneficios principales</h2>
 <div class="grid">
 <div class="card">
 <img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
-<p>Protección individual contra enfermedades graves.</p>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde">
-<p>Inmunidad colectiva que protege a toda la comunidad.</p>
+<p>Protegen a la persona vacunada.</p>
 </div>
 <div class="card">
 <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144">
-<p>Reducción de epidemias y pandemias.</p>
+<p>Reducen la propagación de enfermedades.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde">
+<p>Salvan millones de vidas cada año.</p>
 </div>
 </div>
 </section>
 
+<section id="impacto">
+<h2>Impacto social y económico</h2>
+<p>
+La vacunación no solo protege la salud, también reduce costos médicos,
+hospitalizaciones y ausentismo escolar y laboral.
+</p>
+<p>
+Las comunidades con alta cobertura de vacunación son más resilientes ante
+brotes y epidemias.
+</p>
+</section>
+
 <section id="riesgos">
-<h2>¿Qué pasa si no nos vacunamos?</h2>
+<h2>¿Qué ocurre si no nos vacunamos?</h2>
 <p>
-La falta de vacunación puede provocar el regreso de enfermedades que ya estaban
-controladas, aumentando hospitalizaciones, muertes y costos para los sistemas
-de salud.
+Cuando disminuye la vacunación, reaparecen enfermedades que ya estaban
+controladas. Esto aumenta el riesgo de epidemias y pone en peligro a
+personas vulnerables.
 </p>
-<p>
-Además, pone en riesgo a personas vulnerables como bebés, adultos mayores
-y personas con enfermedades crónicas.
-</p>
+<img class="full" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
 </section>
 
 <section id="mitos">
 <h2>Mitos y realidades</h2>
 <p><strong>Mito:</strong> Las vacunas causan enfermedades.</p>
-<p><strong>Realidad:</strong> Las vacunas no causan la enfermedad, solo entrenan al sistema inmunológico.</p>
-
-<p><strong>Mito:</strong> No son necesarias hoy en día.</p>
+<p><strong>Realidad:</strong> No causan la enfermedad, solo activan defensas.</p>
+<p><strong>Mito:</strong> Ya no son necesarias.</p>
 <p><strong>Realidad:</strong> Siguen siendo esenciales para evitar brotes.</p>
 </section>
 
@@ -228,29 +244,19 @@ y personas con enfermedades crónicas.
 </section>
 
 <section id="entrevista">
-<h2>Entrevista con especialistas</h2>
+<h2>Video informativo sobre la vacunación</h2>
 <p>
-En el siguiente video, expertos en salud explican la importancia de la vacunación
-y su impacto en la sociedad.
+Este video explica de forma clara la importancia de la vacunación y su
+impacto en la salud pública.
 </p>
 
 <div class="video">
 <iframe
-src="https://www.youtube-nocookie.com/embed/9Yy0n8yZ5ZQ"
+src="https://www.youtube-nocookie.com/embed/A-mARlyPn0w"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>
 </iframe>
 </div>
-</section>
-
-<section id="fuentes">
-<h2>Fuentes confiables para consultar</h2>
-<ul>
-<li>Organización Mundial de la Salud (OMS) – https://www.who.int</li>
-<li>Centros para el Control y Prevención de Enfermedades (CDC) – https://www.cdc.gov</li>
-<li>UNICEF – https://www.unicef.org</li>
-<li>Institutos Nacionales de Salud (NIH) – https://www.nih.gov</li>
-</ul>
 </section>
 
 <footer>
